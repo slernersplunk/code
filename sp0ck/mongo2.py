@@ -6,8 +6,5 @@ db = client["testdb"]
 
 collection = db["numbers"]
 
-dictionary = { "number": "1" }
-
-x = collection.insert_one(dictionary)
-
-print (x.inserted_id)
+for x in collection.find():
+    print(x)
