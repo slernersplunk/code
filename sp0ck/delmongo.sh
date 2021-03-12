@@ -1,1 +1,1 @@
-docker stop mongo && docker rm mongo
+sudo docker stop mongo && docker rm mongo
