@@ -1,9 +1,13 @@
 import redis
-import time
+from time import sleep
+from random import random, seed
 
 redis_host = "localhost"
 redis_port = 6379
 redis_password = ""
+
+seed(1)
+x=1
 
 
 def hello_redis():
@@ -17,7 +21,8 @@ def hello_redis():
 
 
 if __name__ == '__main__':
-    x=1
-    while(x):
+    while x:
         hello_redis()
-        time.sleep(.25)
+        y=round(random(),1)+.5
+        print('Sleeping: ', y)
+        sleep(y)
