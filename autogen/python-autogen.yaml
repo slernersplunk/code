@@ -17,6 +17,8 @@ spec:
         ports:
         - containerPort: 6379
         env:
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: deployment.environment=otel-demo
         - name: SPLUNK_SERVICE_NAME
           value: python-autogen-otel
         - name: MY_NODE_NAME
