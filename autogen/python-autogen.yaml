@@ -17,11 +17,11 @@ spec:
         ports:
         - containerPort: 6379
         env:
-        - name: PYTHONUNBUFFERED
-          value: 1
+        - name: PYTHONIOENCODING
+          value: "8"
         - name: OTEL_RESOURCE_ATTRIBUTES
           value: deployment.environment=otel-demo
-        - name: SPLUNK_SERVICE_NAME
+        - name: OTEL_EXPORTER_JAEGER_ENDPOINT
           value: python-autogen-otel
         - name: MY_NODE_NAME
           valueFrom:
