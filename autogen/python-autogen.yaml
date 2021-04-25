@@ -18,7 +18,7 @@ spec:
         - containerPort: 6379
         env:
         - name: PYTHONIOENCODING
-          value: "8"
+          value: "utf-8"
         - name: OTEL_RESOURCE_ATTRIBUTES
           value: deployment.environment=otel-demo
         - name: OTEL_EXPORTER_JAEGER_ENDPOINT
