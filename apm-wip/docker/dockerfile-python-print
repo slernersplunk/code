@@ -1,4 +1,5 @@
 FROM python:slim
+ENV PYTHONUNBUFFERED TRUE
 RUN apt-get update && \ 
     apt install -y python3-pip && \
     apt install -y procps && \
@@ -9,7 +10,6 @@ RUN apt-get update && \
     python3 -m pip install requests && \
     apt -y autoremove && apt-get -y autoclean && \
     export PATH="$HOME/.local/bin:$PATH" && \
-    splk-py-trace-bootstrap  && \
     mkdir /home/code
 WORKDIR /home/code
 COPY . /home/code/

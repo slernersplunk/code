@@ -17,6 +17,8 @@ spec:
         env:
         - name: PYTHONIOENCODING
           value: "utf-8"
+        - name: PYTHONUNBUFFERED=0
+          value: "0"
         command: ["/bin/sh"]
         args: ["run-print.sh"]
         imagePullPolicy: Always
