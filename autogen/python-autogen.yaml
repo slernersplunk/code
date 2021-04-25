@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: python-autogen-otel
-        image: docker.io/stevelerner/splk-python-autogen:latest
+        image: docker.io/stevelerner/python-autogen:latest
         ports:
         - containerPort: 6379
         env:
