@@ -1,5 +1,0 @@
-FROM python:3.7
-ENV PYTHONUNBUFFERED definitely
-WORKDIR /test
-COPY test.py /test/
-CMD ["python", "test.py"]
